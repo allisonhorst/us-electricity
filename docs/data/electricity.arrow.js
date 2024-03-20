@@ -1,4 +1,5 @@
 import * as d3 from "d3";
+import * as Arrow from "apache-arrow";
 
 // Start and end dates
 const end = d3.timeDay.offset(d3.timeHour(new Date()), 1);
@@ -17,8 +18,6 @@ function tidySeries(response, id, name) {
         id: s[id],
         date: datetimeFormat(d) ? datetimeFormat(d) : dateFormat(d),
         value: s.VALUES.DATA[i],
-        reported: s.VALUES.DATA_REPORTED[i],
-        imputed: s.VALUES.DATA_IMPUTED[i],
       };
     });
   });
@@ -35,4 +34,10 @@ const demand = await d3.json(regionalDemandUrl).then((response) => {
   return tidySeries(response, "RESPONDENT_ID", "RESPONDENT_NAME");
 });
 
-process.stdout.write(d3.csvFormat(demand));
+const table = Arrow.tableFromArrays({
+  id: demand.map((d) => d.id),
+  date: demand.map((d) => d.date),
+  value: demand.map((d) => d.value),
+});
+
+process.stdout.write(Arrow.tableToIPC(table));

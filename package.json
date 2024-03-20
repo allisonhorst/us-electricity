@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@observablehq/framework": "latest",
+    "apache-arrow": "^15.0.2",
     "d3-dsv": "^3.0.1",
     "d3-time-format": "^4.1.0"
   },

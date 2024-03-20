@@ -1,11 +1,17 @@
+---
+sql:
+  electricity: ./data/electricity.arrow
+  regions: ./data/eia-regions.csv
+---
+
 # US Electricity Demand
 
 ## Data: Energy Information Administration Opendata API
 
-```js
-const data = FileAttachment("./data/electricity.csv").csv({ typed: true });
+```sql
+SELECT * FROM regions
 ```
 
-```js
-display(data);
+```sql
+SELECT * FROM electricity
 ```
