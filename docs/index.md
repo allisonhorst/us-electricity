@@ -10,7 +10,7 @@ sql:
 
 ```sql
 SELECT * FROM electricity
-LEFT JOIN regions ON id
+LEFT JOIN regions ON electricity.id = regions.id
 ```
 
 ```sql

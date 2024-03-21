@@ -1,17 +1,17 @@
-id,Region/Country Name,Time Zone,testVal
-CAL,California,Pacific,1
-CAR,Carolinas,Eastern,2
-CENT,Central,Central,3
-FLA,Florida,Eastern,4
-MIDA,Mid-Atlantic,Eastern,5
-MIDW,Midwest,Eastern,6
-NE,New England,Eastern,7
-NW,Northwest,Mountain,8
-NY,New York,Eastern,9
-SE,Southeast,Central,10
-SW,Southwest,Arizona,11
-TEN,Tennessee,Central,12
-TEX,Texas,Central,13
-US48,United States Lower 48,Eastern,14
-CAN,Canada,,15
-MEX,Mexico,,16
+id_region,id_no,Region/Country Name,Time Zone
+CAL,1,California,Pacific
+CAR,2,Carolinas,Eastern
+CENT,3,Central,Central
+FLA,4,Florida,Eastern
+MIDA,5,Mid-Atlantic,Eastern
+MIDW,6,Midwest,Eastern
+NE,7,New England,Eastern
+NW,8,Northwest,Mountain
+NY,9,New York,Eastern
+SE,10,Southeast,Central
+SW,11,Southwest,Arizona
+TEN,12,Tennessee,Central
+TEX,13,Texas,Central
+US48,14,United States Lower 48,Eastern
+CAN,15,Canada,
+MEX,16,Mexico,
