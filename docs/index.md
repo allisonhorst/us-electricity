@@ -1,7 +1,7 @@
 ---
 sql:
   electricity: ./data/electricity.arrow
-  regions: ./data/eia-regions.csv
+  regions: https://raw.githubusercontent.com/allisonhorst/us-electricity/main/docs/data/eia-regions.csv
 ---
 
 # US Electricity Demand
@@ -9,9 +9,14 @@ sql:
 ## Data: Energy Information Administration Opendata API
 
 ```sql
-SELECT * FROM regions
+SELECT * FROM electricity
+LEFT JOIN regions ON id
 ```
 
 ```sql
 SELECT * FROM electricity
+```
+
+```sql
+SELECT * FROM regions
 ```
